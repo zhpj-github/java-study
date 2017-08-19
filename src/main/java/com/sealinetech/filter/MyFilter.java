@@ -12,7 +12,9 @@ public class MyFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        resp.getWriter().write("<H1>filter</H1><br>");
+        req.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html;charset=utf-8");
+        resp.getWriter().write("<H1>过滤器启动</H1><br>");
         chain.doFilter(req, resp);
     }
 

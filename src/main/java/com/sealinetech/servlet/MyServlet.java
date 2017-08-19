@@ -22,9 +22,20 @@ public class MyServlet extends HttpServlet{
         resp.getWriter().write("<H1>Hello word</H1><br><br>");
         ServletConfig servletConfig = getServletConfig();
         ServletContext servletContext = getServletContext();
+        Object obj = servletContext.getAttribute("global");
+        Integer count=1;
+        if(obj!=null){
+            count=Integer.parseInt(obj.toString())+1;
+        }
+
+        servletContext.setAttribute("global",count);
+        resp.getWriter().write("<H1>"+count+"</H1><br><br>");
         String globalOne=servletContext.getInitParameter("global-one");
         resp.getWriter().write("<H1>"+globalOne+"</H1><br><br>");
         String localOne=servletConfig.getInitParameter("local-one");
         resp.getWriter().write("<H1>"+localOne+"</H1><br><br>");
+        String url=getServletContext().getContextPath()+"WEB-INF/onepage.jsp";
+        System.out.println(url);
+        req.getRequestDispatcher(url).forward(req, resp);
     }
 }
