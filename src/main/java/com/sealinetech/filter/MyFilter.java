@@ -12,7 +12,7 @@ public class MyFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        resp.getWriter().write("filter<br>");
+        resp.getWriter().write("<H1>filter</H1><br>");
         chain.doFilter(req, resp);
     }
 
