@@ -12,8 +12,13 @@
 </head>
 <body>
 转发<br>
+pageContext.getServletContext().getAttribute:
 <%=pageContext.getServletContext().getAttribute("global")%>
 <br>
-${pageContext.getAttribute("global")}
+application:${applicationScope["global"]}
+<br>
+session:${sessionScope["local"]}
+<br>
+cookie:${cookie["cookie"].value}
 </body>
 </html>
