@@ -27,4 +27,13 @@
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Employee</servlet-name>
+        <servlet-class>com.sealinetech.controller.EmployeeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Employee</servlet-name>
+        <url-pattern>*.employee</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.loginbody {font:12px Helvetica, Arial, sans-serif;  margin:100px auto; padding:0; background-color:#016BA9;}
+.login1{background-image: url(../Images/login_1.jpg); width:960px; height:94px; margin:0 auto;}
+.login2{background-image: url(../Images/login_2.jpg); width:960px; height:49px; margin:0 auto; }
+.login3{background-image: url(../Images/login_3.jpg); width:960px; height:125px; margin:0 auto;}
+.login4{background-image: url(../Images/login_4.jpg); width:960px; height:91px; margin:0 auto;}
+.loginTXT{border: 1px solid #800000; width:150px; background-color:#866961; color:#fff; height:19px;}

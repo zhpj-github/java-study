@@ -20,4 +20,9 @@ public class EmployeeTest {
         EmployeeDao dao=new EmployeeDaoImpl();
         System.out.println(dao.insert(employee));
     }
+    @Test
+    public void queryEmloyeeTest(){
+        EmployeeDao dao=new EmployeeDaoImpl();
+        System.out.println(dao.query());
+    }
 }
